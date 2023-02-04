@@ -1,0 +1,129 @@
+html {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    font-size: calc(80% + 0.8vmin);
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--cream);
+}
+
+main {
+    display: grid;
+    grid-template-areas: "photo content";
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+
+    width: 40rem;
+    border-radius: 1rem;
+    margin: 1rem;
+
+    background-color: var(--white);
+}
+
+@media only screen and (max-width: 650px) {
+    main {
+        grid-template-areas: "photo"
+            "content";
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 3fr;
+        width: 25rem;
+    }
+}
+
+.photo {
+    grid-area: photo;
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+}
+
+@media only screen and (max-width: 650px) {
+    .photo {
+        background-position: 50% 30%;
+        background-repeat: no-repeat;
+    }
+}
+
+.content {
+    padding: 2rem 3rem;
+}
+
+@media only screen and (max-width: 650px) {
+    .content {
+        padding: 2rem 2rem;
+    }
+}
+
+
+h1 {
+    font-family: "Fraunces", sans-serif;
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: var(--dark-grayish-blue);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--dark-grayish-blue);
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.current-price {
+    display: flex;
+    align-items: center;
+
+    font-family: "Fraunces", sans-serif;
+    color: var(--dark-cyan);
+    font-size: 2rem;
+
+    margin-bottom: 1rem;
+}
+
+.old-price {
+    font-family: "Montserrat", sans-serif;
+    color: var(--dark-grayish-blue);
+    font-size: 0.8rem;
+    text-decoration: line-through;
+    margin-left: 1rem;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-cyan);
+    padding: 1rem;
+    border-radius: 0.4rem;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+
+a img {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+}
