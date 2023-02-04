@@ -1,2 +1,1 @@
-# FM-Product-Preview-Fragrance
-Product Preview card made with HTML/CSS.
+## 👋🏼 Thank you for checking out my webpage. I appreciate it! 👋🏼
